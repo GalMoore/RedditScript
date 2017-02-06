@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Jokes!</title>
+
+<!-- ############    STYLESHEET   ############ -->
+<link rel="stylesheet" href="/static/gal.css">
+
+<!-- Twitter java script -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<!-- end twitter javascript -->
+
+<!-- ################### END OF STYLESHEET #################### -->
+</head><body>
+
+<!-- begin fb tag -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- facebook end jscript -->
+
+<!-- spacer is an invisible box to hold the other boxes -->
+<!-- divs will be placed from top to bottom -->
+
+<div id="spacer">
+
+<!-- div  -->
+    <div class="box" id="uplifting">
+        <!-- this is the lefthand box -->
+<!--         span is inside the div tags so the text we call on will be in side the box! -->
+<!--         in the class we define postitoning inside box -->
+<!-- vcenter is a class defined in the css to center things -->
+  
+        <img class="boximage vcenter" src="{{ vars['newsImage']|safe }}">
+        
+        <span class="subtext vcenter">
+        <a href="{{ vars['newsSource']|safe }}" target="_blank">{{ vars['headline'] }} </a>
+        </span>
+    </div>
+
+
+    <div class="box" id="funny">
+        <!-- this is the righthand box-->
+         <!-- the image of the uplifting news item with link -->
+        <img class="boximage vcenter" src="{{ vars['jokeurl']|safe }}">
+        <span class="subtext vcenter">
+        <a href="{{ vars['jokeSource']|safe }}" target="_blank"> 
+        	{{ vars['joketitle'] }} </a> 
+        </span>
+    </div>
+
+
+</div>
+
+
+<div> <center>
+
+	<div class="nounbox" id="noun">
+		<span class="subtext vcenter">
+		<center>{{ vars['noun'] }}</center>
+		</span>
+</center>
+<br>
+</div>
+<a id="button" href="/">Let's Go!</a>
+<br> <center>
+
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Check out this awesome site!">
+Tweet</a>
+
+<div class="fb-share-button" data-href="https://www.redditscript.com" data-layout="button"></div>
+</center>
+</body></html>

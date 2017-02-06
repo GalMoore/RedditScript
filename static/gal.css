@@ -1,0 +1,83 @@
+/* classes start with dot . */
+/* class we will use multiple times */
+/* hashtag means id. is something we will use once */
+
+.box{
+/* relative means it and children will inherit position from container */
+    position:relative;
+/*     all percentages are of browser window size */
+    width:40%;
+    height:55%;
+/*     rounding on edge of boxes */
+/* border-radius:50px; */
+    border:10px solid #000000;
+
+}
+
+.nounbox{
+/* relative means it and children will inherit position from container */
+    position:relative;
+/*     all percentages are of browser window size */
+    width:18%;
+    height:7%;
+/*     rounding on edge of boxes */
+/* border-radius:50px; */
+    border:10px solid #000000;
+
+}
+.boximage{
+/* make thumbnail x% size of theis box */
+    width:50%;
+    float:left;
+    padding: 0% 0% 0% 0%;
+}
+.subtext{
+/* block means put on next line (could be block, inline, inlineblock) */
+    display:block;
+    font-family: "Times New Roman", Times, serif;
+    font-weight:normal;
+    text-align:justify;
+    padding:0%;
+}
+/* a is link. Don't make it underlined or blue */
+.subtext a{
+    text-decoration:none;
+    color:black;
+}
+.vcenter{
+/* Make everything dead center. Put top of object at 50% of height of box */
+/*  */
+    position:relative;
+    top: 50%;
+/* 91.3% of global browers can do 2d transforms http://caniuse.com/#search=transform */
+    transform: translateY(-50%);
+}
+#spacer{
+/* 	min-width:250px; */
+    overflow:auto;
+    margin-bottom:5%;
+    /*border:2px solid black; (this reveals the spacer box)*/
+}
+#uplifting{
+    float:left;
+    margin-left:2%;
+}
+#funny{
+    float:right;
+    margin-right:2%;
+}
+#button{
+    clear:both;
+    display:block;
+    background-color:#327CCB;
+    margin:0 auto;
+    width:20%;
+    padding:0.25em;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-size:2em;
+    border-radius:0.33em;
+    box-shadow:2px 2px 3px #777;
+}
